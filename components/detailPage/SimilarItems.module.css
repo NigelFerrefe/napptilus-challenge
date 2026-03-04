@@ -1,0 +1,46 @@
+.similarItemsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px 80px 16px; 
+  gap: 40px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.similarItems {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; 
+}
+
+.similarItems::-webkit-scrollbar {
+  display: none; 
+}
+
+.similarItems > div {
+  flex-shrink: 0;
+  width: 344px;
+  scroll-snap-align: start;
+}
+
+.progressBar {
+  width: 100%;
+  height: 2px;
+  background-color: #CCC;
+  position: relative;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background-color: var(--foreground);
+  width: 0%;
+  transition: width 0.1s linear;
+}

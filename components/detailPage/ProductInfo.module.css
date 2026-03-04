@@ -1,0 +1,105 @@
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 40px;
+}
+
+.productInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.productTitlePrice {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+.tittle {
+  font-size: 20px;
+  font-weight: 300;
+}
+.price {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.selectorsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding-bottom: 24px;
+}
+.storageContainer {
+  display: flex;
+  flex-direction: column;
+  width: 273px;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.storageOption {
+  display: flex;
+  width: 100%;
+  border: 1px solid #ccc;
+}
+
+.storageOption button {
+  flex: 1;
+  border: none;
+  background: white;
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.storageOption button:not(:last-child) {
+  border-right: 0.5px solid #ccc;
+}
+
+.colorsContainer {
+  display: flex;
+  flex-direction: column;
+  width: 273px;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.colorsOptions {
+  display: flex;
+  gap: 16px;
+}
+
+.colorButton {
+  border: 1px solid #ccc;
+  background: transparent;
+  cursor: pointer;
+  padding: 1px;
+}
+
+.colorButton:hover {
+  border: 1px solid black;
+
+}
+
+.colorSquare {
+  width: 24px;
+  height: 24px;
+}
+
+.colorLabel {
+  font-size: 12px;
+  font-weight: 300;
+  min-height: 14px;
+}
+
+.buttonContainer {
+  display: flex;
+  height: 48px;
+}
+
+

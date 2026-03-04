@@ -14,6 +14,16 @@ const api = axios.create({
   },
 });
 
+export class ApiError extends Error {
+  constructor(
+    public readonly error: string,
+    public readonly message: string,
+  ) {
+    super(message);
+    this.name = "ApiError";
+  }
+}
+
 async function validationFetch<T>(
   promise: Promise<unknown>,
   schema: ZodType<T>,
@@ -23,7 +33,8 @@ async function validationFetch<T>(
     return schema.parse(data);
   } catch (error: unknown) {
     if (axios.isAxiosError(error) && error.response) {
-      throw ErrorSchema.parse(error.response.data);
+      const parsed = ErrorSchema.parse(error.response.data);
+      throw new ApiError(parsed.error, parsed.message);
     }
     throw error;
   }
@@ -50,6 +61,13 @@ export const getPhones = async (
   });
 };
 
-export const getPhoneById = async (id: string): Promise<PhoneDetail> => {
-  return validationFetch(api.get(`/products/${id}`), PhoneDetailSchema);
+export const getPhoneById = async (id: string): Promise<PhoneDetail | null> => {
+  try {
+    return await validationFetch(api.get(`/products/${id}`), PhoneDetailSchema);
+  } catch (error) {
+    if (error instanceof ApiError && error.error === "NOT-FOUND") {
+      return null;
+    }
+    throw error;
+  }
 };

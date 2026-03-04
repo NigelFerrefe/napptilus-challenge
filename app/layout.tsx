@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
-import Navbar from "@/components/navbar/navbar";
+import { Navbar } from "@/components/navbar/navbar";
+
 
 export const metadata: Metadata = {
   title: {

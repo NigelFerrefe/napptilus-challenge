@@ -1,0 +1,17 @@
+.backButtonContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 16px;
+
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  gap: 4px;
+  font-weight: 300;
+  font-size: 12px;
+}

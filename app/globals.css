@@ -9,17 +9,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --secondary-font-color: #70736D;
+  --secondary-font-color: #70736d;
   --font-family: Helvetica, Arial, sans-serif;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-family);
 }
 
-.main-container {
+.mainContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -28,3 +27,15 @@ body {
   gap: 24px;
 }
 
+.detailPageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 40px;
+}

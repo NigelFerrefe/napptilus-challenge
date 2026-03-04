@@ -3,7 +3,7 @@ import "./globals.css";
 
 export default async function Home() {
   return (
-    <main className="main-container">
+    <main className="mainContainer">
       <PhoneList />
     </main>
   );

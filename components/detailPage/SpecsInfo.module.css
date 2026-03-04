@@ -1,0 +1,29 @@
+.specsContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 40px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.SpecsRow {
+  display: flex;
+  flex-direction: row;
+  padding: 16px 0;
+  gap: 12px;
+  border-top: 0.5px solid var(--foreground);
+  font-size: 12px;
+  font-weight: 300;
+}
+
+.SpecsRow:last-child {
+  border-bottom: 0.5px solid var(--foreground);
+}
+
+.SpecsRow p {
+  flex: 1;
+}

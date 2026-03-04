@@ -4,7 +4,12 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
   images: {
-    domains: ["prueba-tecnica-api-tienda-moviles.onrender.com"],
+    remotePatterns: [
+      {
+        protocol: "http",
+        hostname: "prueba-tecnica-api-tienda-moviles.onrender.com",
+      }
+    ]
   },
 };
 

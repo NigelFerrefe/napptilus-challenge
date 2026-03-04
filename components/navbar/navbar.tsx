@@ -7,10 +7,18 @@ import styles from "./navbar.module.css";
 import inactiveBagIcon from "@/assets/bag-icon-inactive.svg";
 import activeBagIcon from "@/assets/bag-icon-active.svg";
 import { useCart } from "@/hooks/useCart";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
   const { totalItems } = useCart();
+const [mounted, setMounted] = useState(false);
 
+ useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setMounted(true);
+  }, []);
+
+  const displayItems = mounted ? totalItems : 0;
   return (
     <div className={styles.navbar}>
       <Link href="/">
@@ -18,16 +26,16 @@ export const Navbar = () => {
       </Link>
       <Link href="/cart" className={styles.cartContainer}>
         <Image
-          src={totalItems > 0 ? activeBagIcon : inactiveBagIcon}
+          src={displayItems > 0 ? activeBagIcon : inactiveBagIcon}
           alt="" 
           width={20}
           height={20}
         />
         <span
           className={styles.cartCount}
-          aria-label={`${totalItems} products in cart`}
+          aria-label={`${displayItems} products in cart`}
         >
-          {totalItems}
+          {displayItems}
         </span>
       </Link>
     </div>

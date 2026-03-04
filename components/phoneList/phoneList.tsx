@@ -1,14 +1,13 @@
-// PhoneList — maneja todo
-'use client'
+"use client";
 
 import { useState, useEffect } from "react";
 import { Phone } from "@/lib/api/types";
 import { getPhones } from "@/lib/api/api";
-import PhoneCard from "../phoneCard/phoneCard";
 import { SearchBar } from "../searchBar/searchBar";
 import styles from "./phoneList.module.css";
 import { useSearchParams } from "next/navigation";
 import { DEFAULT_PAGE_LIMIT, DEFAULT_PAGE_OFFSET } from "@/lib/constants";
+import { PhoneCard } from "../phoneCard/phoneCard";
 
 export const PhoneList = () => {
   const [phonesList, setPhonesList] = useState<Phone[]>([]);
