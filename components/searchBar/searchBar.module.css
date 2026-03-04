@@ -1,0 +1,15 @@
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 12px 16px;
+  gap: 12px;
+}
+
+
+
+
+.results {
+  font-size: 12px;
+  font-weight: 300;
+}

@@ -6,7 +6,7 @@ type CartProps = {
   phone: PhoneDetail;
 };
 
-export default function Cart({ phone }: CartProps) {
+export const Cart = ({ phone }: CartProps) => {
   const { items, totalPrice, addToCart, totalItems, removeFromCart, clearCart } = useCart();
 
   const handleAddToCart = () => {

@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 16px;
+}
+
+.cartContainer {
+  display: flex;
+  align-items: center;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  gap: 6px;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.cartCount {
+  font-weight: 300;
+  line-height: 16px;
+}

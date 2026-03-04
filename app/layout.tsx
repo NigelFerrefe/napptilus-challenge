@@ -1,28 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import Navbar from "@/components/navbar/navbar";
 
 export const metadata: Metadata = {
-    title: {
+  title: {
     template: `%s | MBST`,
     default: APP_NAME,
   },
   description: APP_DESCRIPTION,
   icons: {
-    icon: "/favicon.png",
-  }
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({
@@ -31,14 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <CartProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+    <html lang="en">
+      <body>
+        <CartProvider>
+          <Navbar />
           {children}
-        </body>
-      </html>
-    </CartProvider>
+        </CartProvider>
+      </body>
+    </html>
   );
 }

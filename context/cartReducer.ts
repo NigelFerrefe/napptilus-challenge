@@ -9,7 +9,7 @@ export type CartAction =
   | { type: "REMOVE"; payload: { id: string } }
   | { type: "CLEAR" };
 
-export function cartReducer(state: CartState, action: CartAction) {
+export const cartReducer = (state: CartState, action: CartAction) => {
   switch (action.type) {
     case "ADD":
       return {
