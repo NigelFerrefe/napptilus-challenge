@@ -1,17 +1,20 @@
 import styles from "./Button.module.css"
 
+type ButtonVariant = 'primary' | 'secondary';
+
 type ButtonProps = {
   readonly onClick: () => void;
-  readonly disabled?: boolean;
   readonly children: React.ReactNode;
+  readonly disabled?: boolean;
+  readonly variant?: ButtonVariant;
 };
 
-const Button = ({ onClick, disabled, children }: ButtonProps) => {
+const Button = ({ onClick, disabled, children, variant = 'primary' }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
       disabled={disabled}
-      className={styles.button}
+      className={`${styles.button} ${styles[variant]}`}
     >
       {children}
     </button>

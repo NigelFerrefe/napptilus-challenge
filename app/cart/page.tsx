@@ -1,7 +1,13 @@
-const CartPage = () => {
+import Cart from "@/components/cart/CartInfo";
+
+
+
+
+export default function CartPage() {
+
     return ( 
-        <h1>Cart Page</h1>
+        <Cart />
     );
 }
  
-export default CartPage
+

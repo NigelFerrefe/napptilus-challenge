@@ -11,6 +11,7 @@
   --foreground: #171717;
   --secondary-font-color: #70736d;
   --font-family: Helvetica, Arial, sans-serif;
+  --navbar-height: 80px;
 }
 
 body {
@@ -30,7 +31,6 @@ body {
 .detailPageContainer {
   display: flex;
   flex-direction: column;
-  gap: 80px;
 }
 
 .productContainer {

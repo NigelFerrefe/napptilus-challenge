@@ -20,3 +20,13 @@
   color: #C2BFBC;
 }
 
+.primary {
+  background-color: var(--foreground);
+  color: var(--background);
+}
+
+.secondary {
+  background-color: var(--background);
+  color: var(--foreground);
+  border: 1px solid var(--foreground);
+}
