@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { CartProvider, CartContext } from "@/context/cartContext";
+import { CartProvider, CartContext } from "@/context/CartContext";
 import { useContext } from "react";
 import { CART_STORAGE_KEY } from "@/lib/constants";
 import { CartItem } from "@/lib/cart/types";

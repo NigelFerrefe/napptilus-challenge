@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { CartProvider } from "@/context/cartContext";
+import { CartProvider } from "@/context/CartContext";
 import { APP_DESCRIPTION, APP_NAME } from "@/lib/constants";
 import { Navbar } from "@/components/navbar/Navbar";
 
