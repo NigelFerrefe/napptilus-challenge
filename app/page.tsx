@@ -1,10 +1,13 @@
 import { PhoneList } from "@/components/phoneList/phoneList";
-import "./globals.css";
+import { getPhones } from "@/lib/api/api";
+import { DEFAULT_PAGE_LIMIT, DEFAULT_PAGE_OFFSET } from "@/lib/constants";
 
 export default async function Home() {
+  const phones = await getPhones(undefined, DEFAULT_PAGE_LIMIT, DEFAULT_PAGE_OFFSET);
+  
   return (
     <main className="mainContainer">
-      <PhoneList />
+      <PhoneList initialPhones={phones} />
     </main>
   );
 }

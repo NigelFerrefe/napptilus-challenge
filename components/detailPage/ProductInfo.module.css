@@ -5,6 +5,12 @@
   gap: 40px;
 }
 
+.productImageContainer {
+  position: relative;
+  width: 260px;
+  height: 273px;
+}
+
 .productInfoContainer {
   display: flex;
   flex-direction: column;
@@ -18,11 +24,9 @@
 }
 .tittle {
   font-size: 20px;
-  font-weight: 300;
 }
 .price {
   font-size: 14px;
-  font-weight: 300;
 }
 
 .selectorsContainer {
@@ -37,13 +41,12 @@
   width: 273px;
   gap: 20px;
   font-size: 12px;
-  font-weight: 300;
 }
 
 .storageOption {
   display: flex;
   width: 100%;
-  border: 1px solid #ccc;
+  border: 1px solid var(--basic-gray);
 }
 
 .storageOption button {
@@ -53,7 +56,6 @@
   padding: 12px 0;
   cursor: pointer;
   font-size: 12px;
-  font-weight: 300;
 }
 
 .storageOption button:not(:last-child) {
@@ -66,8 +68,8 @@
   width: 273px;
   gap: 12px;
   font-size: 12px;
-  font-weight: 300;
 }
+
 
 .colorsOptions {
   display: flex;
@@ -81,9 +83,14 @@
   padding: 1px;
 }
 
-.colorButton:hover {
-  border: 1px solid black;
 
+
+.storageOption button.selectedStorage {
+  border: 1px solid black;
+}
+
+.colorButton.selectedColor {
+  border: 1px solid black;
 }
 
 .colorSquare {
@@ -93,13 +100,55 @@
 
 .colorLabel {
   font-size: 12px;
-  font-weight: 300;
   min-height: 14px;
 }
 
 .buttonContainer {
   display: flex;
+  max-width: 393px;
   height: 48px;
 }
 
+/* Tablet */
+@media (min-width: 768px) {
+  .productContainer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1023px;
+    margin: 0 auto;
+  }
 
+
+  .productInfoContainer {
+    flex: 1;
+  }
+
+  .productImageContainer {
+    width: 337px;
+    height: 416px;
+  }
+  .buttonContainer {
+    width: 260px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .productContainer {
+    max-width: 1200px;
+  }
+
+  .productImageContainer {
+    width: 510px;
+    height: 630px;
+  }
+  .productInfoContainer {
+    gap: 64px;
+  }
+
+  .buttonContainer {
+    width: 380px;
+    height: 56px;
+  }
+}

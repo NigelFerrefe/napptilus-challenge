@@ -6,10 +6,21 @@
   gap: 12px;
 }
 
-
-
-
 .results {
   font-size: 12px;
-  font-weight: 300;
+}
+
+
+/* Tablet */
+@media (min-width: 768px) {
+  .searchContainer {
+   padding: 12px 40px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .searchContainer {
+    padding: 12px 100px;
+  }
 }

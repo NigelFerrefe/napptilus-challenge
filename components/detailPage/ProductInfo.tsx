@@ -44,8 +44,16 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
   };
 
   return (
-    <div className={styles.productContainer}>
-      <Image src={mainImage} width={260} height={273} alt="phone" />
+    <section className={styles.productContainer}>
+      <div className={styles.productImageContainer}>
+        <Image
+          src={mainImage}
+          fill
+          alt={product.name}
+          style={{ objectFit: "contain" }}
+          sizes="(min-width: 1280px) 510px, (min-width: 768px) 337px, 260px"
+        />
+      </div>
       <div className={styles.productInfoContainer}>
         <div className={styles.productTitlePrice}>
           <p className={styles.tittle}>{product.name.toUpperCase()}</p>
@@ -63,8 +71,15 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
                 <button
                   key={`${id}-${option.capacity}`}
                   onClick={() => setSelectedStorage(option)}
+                  className={
+                    selectedStorage?.capacity === option.capacity
+                      ? styles.selectedStorage
+                      : ""
+                  }
+                  aria-label={`Storage ${option.capacity}`}
+                  aria-pressed={selectedStorage?.capacity === option.capacity}
                 >
-                  <span>{option.capacity} GB</span>
+                  <span>{option.capacity}</span>
                 </button>
               ))}
             </div>
@@ -76,10 +91,12 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
               {product.colorOptions.map((option) => (
                 <button
                   key={`${id}-${option.name}`}
-                  className={styles.colorButton}
+                  className={`${styles.colorButton} ${selectedColor?.name === option.name ? styles.selectedColor : ""}`}
                   onMouseEnter={() => setHoveredColor(option.name)}
                   onMouseLeave={() => setHoveredColor(null)}
                   onClick={() => setSelectedColor(option)}
+                  aria-label={`Color ${option.name}`}
+                  aria-pressed={selectedColor?.name === option.name}
                 >
                   <div
                     className={styles.colorSquare}
@@ -95,15 +112,12 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           </div>
         </div>
         <div className={styles.buttonContainer}>
-          <Button
-            onClick={handleAddToCart}
-            disabled={isDisabled}
-          >
+          <Button onClick={handleAddToCart} disabled={isDisabled}>
             ADD
           </Button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -10,20 +10,23 @@
   --background: #ffffff;
   --foreground: #171717;
   --secondary-font-color: #70736d;
-  --font-family: Helvetica, Arial, sans-serif;
+  --warning: #df0000;
+  --basic-gray: #cccccc;
   --navbar-height: 80px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
 }
 
 .mainContainer {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 16px;
   padding-top: 24px;
   gap: 24px;
 }
@@ -38,4 +41,29 @@ body {
   flex-direction: column;
   padding: 0 16px;
   gap: 40px;
+}
+
+.cartPageContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 0 16px;
+  gap: 40px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .mainContainer {
+    padding-top: 48px;
+    gap: 48px;
+  }
+
+  .detailPageContainer {
+    padding-top: 48px;
+    gap: 48px;
+  }
+
+  .cartPageContainer {
+    padding-top: 48px;
+    gap: 48px;
+  }
 }

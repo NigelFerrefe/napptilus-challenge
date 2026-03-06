@@ -34,7 +34,8 @@ export const SearchBar = ({ resultsCount }: SearchBarProps) => {
         value={query}
         onChange={setQuery}
         onClear={() => setQuery("")}
-        placeholder="Search..."
+        placeholder="Search for a smartphone..."
+        ariaLabel="Search for a smartphone..."
       />
       <p className={styles.results}>{resultsCount} RESULTS</p>
     </div>

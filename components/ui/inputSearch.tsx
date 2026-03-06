@@ -8,6 +8,7 @@ type InputSearchProps = {
   onChange: (value: string) => void;
   onClear: () => void;
   placeholder?: string;
+  ariaLabel?:string;
 };
 
 export const InputSearch = ({
@@ -15,6 +16,7 @@ export const InputSearch = ({
   onChange,
   onClear,
   placeholder,
+  ariaLabel
 }: InputSearchProps) => {
     return (
       <div className={styles.inputContainer}>
@@ -24,6 +26,7 @@ export const InputSearch = ({
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           className={styles.searchInput}
+          aria-label={ariaLabel}
         />
         {value && (
           <button onClick={() => onClear()} className={styles.clearSearch} aria-label="Clear search">

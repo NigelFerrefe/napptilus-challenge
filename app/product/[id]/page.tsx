@@ -7,9 +7,9 @@ import { PhoneDetail } from "@/lib/api/types";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
-export async function generateMetadata(
-  props: { params: Promise<{ id: string }> }
-): Promise<Metadata> {
+export async function generateMetadata(props: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
   const { id } = await props.params;
   const product = await getPhoneById(id);
   return {
@@ -24,14 +24,14 @@ const DetailPage = async (props: { params: Promise<{ id: string }> }) => {
   if (!product) notFound();
 
   return (
-    <div className="detailPageContainer">
-        <BackButton />
+    <main className="detailPageContainer">
+      <BackButton />
       <div className="productContainer">
-        <ProductInfo product={product}  />
-          <SpecsInfo product={product} />
-          <SimilarItems product={product} />
+        <ProductInfo product={product} />
+        <SpecsInfo product={product} />
+        <SimilarItems product={product} />
       </div>
-    </div>
+    </main>
   );
 };
 

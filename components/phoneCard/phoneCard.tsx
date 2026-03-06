@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Phone} from '@/lib/api/types';
+import { Phone } from "@/lib/api/types";
 import styles from "./phoneCard.module.css";
 
 type PhoneCardProps = {
@@ -9,16 +9,21 @@ type PhoneCardProps = {
 
 export const PhoneCard = ({ phone }: PhoneCardProps) => {
   return (
-    <Link href={`/product/${phone.id}`} className={styles.cardContainer} aria-label={`view details for ${phone.name}`}>
-     <div className={styles.imageContainer}>
-  <Image
-    src={phone.imageUrl}
-    alt={phone.name}
-    width={312}
-    height={257}
-    style={{ objectFit: "contain" }}
-  />
-</div>
+    <Link
+      href={`/product/${phone.id}`}
+      className={styles.cardContainer}
+      aria-label={`view details for ${phone.name}`}
+    >
+      <div className={styles.imageContainer}>
+        <Image
+          src={phone.imageUrl}
+          alt=""
+          fill
+          style={{ objectFit: "contain" }}
+          sizes="(min-width: 1280px) 312px, (min-width: 768px) 345px, 329px"
+          priority
+        />
+      </div>
       <div className={styles.infoContainer}>
         <p>{phone.brand.toUpperCase()}</p>
         <div className={styles.namePriceContainer}>
@@ -29,5 +34,3 @@ export const PhoneCard = ({ phone }: PhoneCardProps) => {
     </Link>
   );
 };
-
-

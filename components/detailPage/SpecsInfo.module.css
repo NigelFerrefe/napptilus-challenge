@@ -7,7 +7,6 @@
 
 .title {
   font-size: 20px;
-  font-weight: 300;
 }
 
 .SpecsRow {
@@ -17,7 +16,6 @@
   gap: 12px;
   border-top: 0.5px solid var(--foreground);
   font-size: 12px;
-  font-weight: 300;
 }
 
 .SpecsRow:last-child {
@@ -26,4 +24,19 @@
 
 .SpecsRow p {
   flex: 1;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .specsContainer {
+    max-width: 1023px;
+    margin: 0 auto;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .specsContainer {
+    max-width: 1200px;
+  }
 }

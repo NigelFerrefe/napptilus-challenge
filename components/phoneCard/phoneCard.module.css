@@ -34,9 +34,9 @@
 }
 
 .imageContainer {
-    display: flex;
-  align-items: center;
-
+  position: relative;
+  width: 100%;
+  height: 257px;
   z-index: 1;
 }
 
@@ -47,7 +47,6 @@
   height: 31px;
   gap: 8px;
   font-size: 10px;
-  font-weight: 300;
   color: var(--secondary-font-color);
   z-index: 1;
 }
@@ -66,4 +65,18 @@
 
 .cardContainer:hover .namePriceContainer {
   color: var(--background);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .imageContainer {
+    height: 290px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .imageContainer {
+    height: 257px;
+  }
 }

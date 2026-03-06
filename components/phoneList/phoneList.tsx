@@ -9,15 +9,21 @@ import { useSearchParams } from "next/navigation";
 import { DEFAULT_PAGE_LIMIT, DEFAULT_PAGE_OFFSET } from "@/lib/constants";
 import { PhoneCard } from "../phoneCard/phoneCard";
 
-export const PhoneList = () => {
-  const [phonesList, setPhonesList] = useState<Phone[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+type PhoneListProps = {
+  initialPhones: Phone[];
+};
+
+export const PhoneList = ({ initialPhones }: PhoneListProps) => {
+  const [phonesList, setPhonesList] = useState<Phone[]>(initialPhones);
+  const [isLoading, setIsLoading] = useState(false);
   const searchParams = useSearchParams();
   const query = searchParams.get("query") || "";
   const limit = Number(searchParams.get("limit")) || DEFAULT_PAGE_LIMIT;
   const offset = Number(searchParams.get("offset")) || DEFAULT_PAGE_OFFSET;
 
   useEffect(() => {
+    if (!query) return;
+
     const fetchPhones = async () => {
       setIsLoading(true);
       const results = await getPhones(query || undefined, limit, offset);
@@ -28,14 +34,16 @@ export const PhoneList = () => {
     fetchPhones();
   }, [query, limit, offset]);
 
+  const displayPhones = query ? phonesList : initialPhones;
+
   return (
     <>
-      <SearchBar resultsCount={phonesList.length} />
+      <SearchBar resultsCount={displayPhones.length} />
       {isLoading ? (
         <p>Loading...</p>
       ) : (
         <div className={styles.grid}>
-          {phonesList.map((phone) => (
+          {displayPhones.map((phone) => (
             <PhoneCard key={phone.id} phone={phone} />
           ))}
         </div>
