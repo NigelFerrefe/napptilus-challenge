@@ -10,11 +10,10 @@
   font-size: 12px;
 }
 
-
 /* Tablet */
 @media (min-width: 768px) {
   .searchContainer {
-   padding: 12px 40px;
+    padding: 12px 40px;
   }
 }
 

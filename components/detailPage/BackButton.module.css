@@ -3,7 +3,6 @@
   align-items: center;
   width: 100%;
   padding: 12px 16px;
- 
 }
 
 .backButton {
@@ -17,14 +16,14 @@
 
 /* Tablet */
 @media (min-width: 768px) {
- .backButtonContainer {
-  padding: 12px 40px;
- }
+  .backButtonContainer {
+    padding: 12px 40px;
+  }
 }
 
 /* Desktop */
 @media (min-width: 1024px) {
- .backButtonContainer {
-  padding: 12px 100px;
- }
+  .backButtonContainer {
+    padding: 12px 100px;
+  }
 }

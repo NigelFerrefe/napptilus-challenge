@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr;
   padding: 16px;
-
 }
 
 /* Tablet */
@@ -14,9 +13,9 @@
 }
 
 /* Desktop */
-@media (min-width: 1024) {
+@media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(5, 1fr);
-     padding: 16px 100px;
+    padding: 16px 100px;
   }
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Phone } from "@/lib/api/types";
-import styles from "./phoneCard.module.css";
+import styles from "./PhoneCard.module.css";
 
 type PhoneCardProps = {
   readonly phone: Phone;
@@ -20,7 +20,7 @@ export const PhoneCard = ({ phone }: PhoneCardProps) => {
           alt=""
           fill
           style={{ objectFit: "contain" }}
-          sizes="(min-width: 1280px) 312px, (min-width: 768px) 345px, 329px"
+          sizes="(min-width: 1024px) 312px, (min-width: 768px) 345px, 329px"
           priority
         />
       </div>

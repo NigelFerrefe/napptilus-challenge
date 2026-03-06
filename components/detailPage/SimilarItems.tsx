@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { PhoneCard } from "@/components/phoneCard/phoneCard";
+import { PhoneCard } from "@/components/phoneCard/PhoneCard";
 import { PhoneDetail } from "@/lib/api/types";
 import styles from "./SimilarItems.module.css";
 

@@ -1,20 +1,23 @@
-'use client';
+"use client";
 
+import Button from "@/components/ui/Button";
 import Link from "next/link";
-
 
 
 function NotFoundPage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <div className="p-6 w-1/3 rounded-lg shadow-md text-center">
-        <h1 className="text-3xl font-bold mb-4">Not Found</h1>
-        <p className="text-destructive">Could not find requested page</p>
-        <Link href={'/'}>Home</Link>
+    <div className="notfound-wrapper">
+      <div className="notfound-card">
+        <h1 className="notfound-title">404</h1>
+        <p className="notfound-text">Page not found.</p>
+        <Link href="/">
+          <Button onClick={() => {}} variant="primary">
+            Go home
+          </Button>
+        </Link>
       </div>
     </div>
   );
-};
+}
 
 export default NotFoundPage;
-

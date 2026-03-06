@@ -51,7 +51,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
           fill
           alt={product.name}
           style={{ objectFit: "contain" }}
-          sizes="(min-width: 1280px) 510px, (min-width: 768px) 337px, 260px"
+          sizes="(min-width: 1024px) 510px, (min-width: 768px) 337px, 260px"
         />
       </div>
       <div className={styles.productInfoContainer}>

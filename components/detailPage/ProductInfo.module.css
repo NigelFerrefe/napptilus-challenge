@@ -70,7 +70,6 @@
   font-size: 12px;
 }
 
-
 .colorsOptions {
   display: flex;
   gap: 16px;
@@ -82,8 +81,6 @@
   cursor: pointer;
   padding: 1px;
 }
-
-
 
 .storageOption button.selectedStorage {
   border: 1px solid black;
@@ -118,7 +115,6 @@
     max-width: 1023px;
     margin: 0 auto;
   }
-
 
   .productInfoContainer {
     flex: 1;

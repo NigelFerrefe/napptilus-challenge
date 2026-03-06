@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 import { Phone } from "@/lib/api/types";
 import { getPhones } from "@/lib/api/api";
-import { SearchBar } from "../searchBar/searchBar";
-import styles from "./phoneList.module.css";
+import { SearchBar } from "../searchBar/SearchBar";
+import styles from "./PhoneList.module.css";
 import { useSearchParams } from "next/navigation";
 import { DEFAULT_PAGE_LIMIT, DEFAULT_PAGE_OFFSET } from "@/lib/constants";
-import { PhoneCard } from "../phoneCard/phoneCard";
+import { PhoneCard } from "../phoneCard/PhoneCard";
+import LoadingPage from "@/app/loading";
+
+
 
 type PhoneListProps = {
   initialPhones: Phone[];
@@ -40,7 +43,7 @@ export const PhoneList = ({ initialPhones }: PhoneListProps) => {
     <>
       <SearchBar resultsCount={displayPhones.length} />
       {isLoading ? (
-        <p>Loading...</p>
+        <LoadingPage />
       ) : (
         <div className={styles.grid}>
           {displayPhones.map((phone) => (

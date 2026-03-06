@@ -1,4 +1,4 @@
-import { PhoneList } from "@/components/phoneList/phoneList";
+import { PhoneList } from "@/components/phoneList/PhoneList";
 import { getPhones } from "@/lib/api/api";
 import { DEFAULT_PAGE_LIMIT, DEFAULT_PAGE_OFFSET } from "@/lib/constants";
 

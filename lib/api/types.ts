@@ -53,5 +53,3 @@ export const PhoneDetailSchema = z.object({
 export type ApiError = z.infer<typeof ErrorSchema>;
 export type Phone = z.infer<typeof PhoneSchema>;
 export type PhoneDetail = z.infer<typeof PhoneDetailSchema>;
-
-

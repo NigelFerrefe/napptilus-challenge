@@ -28,14 +28,14 @@ const initialState: CartState = { items: [] };
 
 export const CartContext = createContext<CartContextType | null>(null);
 
-const  loadCartFromStorage = (): CartState => {
+const loadCartFromStorage = (): CartState => {
   try {
     const stored = localStorage.getItem(CART_STORAGE_KEY);
     return stored ? JSON.parse(stored) : initialState;
   } catch {
     return initialState;
   }
-}
+};
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [state, dispatch] = useReducer(
@@ -77,4 +77,4 @@ export const CartProvider = ({ children }: CartProviderProps) => {
   return (
     <CartContext.Provider value={contextValue}>{children}</CartContext.Provider>
   );
-}
+};

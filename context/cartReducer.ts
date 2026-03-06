@@ -29,4 +29,4 @@ export const cartReducer = (state: CartState, action: CartAction) => {
     default:
       return state;
   }
-}
+};

@@ -1,6 +1,6 @@
-import styles from "./Button.module.css"
+import styles from "./Button.module.css";
 
-type ButtonVariant = 'primary' | 'secondary';
+type ButtonVariant = "primary" | "secondary";
 
 type ButtonProps = {
   readonly onClick: () => void;
@@ -9,7 +9,12 @@ type ButtonProps = {
   readonly variant?: ButtonVariant;
 };
 
-const Button = ({ onClick, disabled, children, variant = 'primary' }: ButtonProps) => {
+const Button = ({
+  onClick,
+  disabled,
+  children,
+  variant = "primary",
+}: ButtonProps) => {
   return (
     <button
       onClick={onClick}

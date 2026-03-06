@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/assets/logo.svg";
-import styles from "./navbar.module.css";
+import styles from "./Navbar.module.css";
 import inactiveBagIcon from "@/assets/bag-icon-inactive.svg";
 import activeBagIcon from "@/assets/bag-icon-active.svg";
 import { useCart } from "@/hooks/useCart";
@@ -24,17 +24,18 @@ export const Navbar = () => {
       <Link href="/" aria-label="Go home">
         <Image src={logo} alt="" width={74} height={24} priority />
       </Link>
-      <Link href="/cart" className={styles.cartContainer} aria-label={`Cart, ${displayItems} items`}>
+      <Link
+        href="/cart"
+        className={styles.cartContainer}
+        aria-label={`Cart, ${displayItems} items`}
+      >
         <Image
           src={displayItems > 0 ? activeBagIcon : inactiveBagIcon}
           alt=""
           width={20}
           height={20}
         />
-        <span
-          className={styles.cartCount}
-          aria-hidden="true"
-        >
+        <span className={styles.cartCount} aria-hidden="true">
           {displayItems}
         </span>
       </Link>

@@ -50,6 +50,46 @@ body {
   gap: 40px;
 }
 
+.notfound-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 16px;
+  background: var(--background);
+}
+
+.notfound-card {
+  text-align: center;
+  padding: 40px 32px;
+  border: 1px solid var(--basic-gray);
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+}
+
+.notfound-title {
+  font-size: 5rem;
+  font-weight: bold;
+  color: var(--foreground);
+  margin-bottom: 16px;
+}
+
+.notfound-text {
+  font-size: 1.25rem;
+  color: var(--secondary-font-color);
+  margin-bottom: 24px;
+}
+
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
 /* Tablet */
 @media (min-width: 768px) {
   .mainContainer {

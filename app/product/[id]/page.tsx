@@ -1,4 +1,4 @@
-import BackButton from "@/components/detailPage/backButton";
+import BackButton from "@/components/detailPage/BackButton";
 import ProductInfo from "@/components/detailPage/ProductInfo";
 import SimilarItems from "@/components/detailPage/SimilarItems";
 import SpecsInfo from "@/components/detailPage/SpecsInfo";

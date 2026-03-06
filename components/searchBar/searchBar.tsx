@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import styles from "./searchBar.module.css";
-import { InputSearch } from "../ui/inputSearch";
+import styles from "./SearchBar.module.css";
+import { InputSearch } from "../ui/InputSearch";
 import { useRouter, useSearchParams } from "next/navigation";
 
 type SearchBarProps = {
