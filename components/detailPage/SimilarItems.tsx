@@ -74,6 +74,7 @@ const SimilarItems = ({ product }: ProductInfoProps) => {
 
   return (
     <section className={styles.similarItemsContainer}>
+      <div className={styles.innerContainer}>
       <h2 className={styles.title}>SIMILAR PRODUCTS</h2>
 
       <div
@@ -110,6 +111,7 @@ const SimilarItems = ({ product }: ProductInfoProps) => {
             left: `${fillLeft}%`,
           }}
         />
+      </div>
       </div>
     </section>
   );

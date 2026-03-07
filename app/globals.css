@@ -98,12 +98,11 @@ body {
   }
 
   .detailPageContainer {
-    padding-top: 48px;
     gap: 48px;
   }
 
   .cartPageContainer {
-    padding-top: 48px;
+  
     gap: 48px;
   }
 }

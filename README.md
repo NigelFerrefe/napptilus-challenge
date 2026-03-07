@@ -188,4 +188,4 @@ Known API issue: The /products endpoint occasionally returns duplicate id entrie
 
 ## Author
 
-Nigel Ferreres — [GitHub](https://github.com/NigelFerrefe/napptilus-challenge)
+Nigel Ferreres — [Visit page](https://napptilus-challenge.vercel.app/cart)

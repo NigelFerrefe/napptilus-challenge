@@ -22,9 +22,13 @@
   border-bottom: 0.5px solid var(--foreground);
 }
 
-.SpecsRow p {
+.SpecsRow dt {
   flex: 1;
 }
+.SpecsRow dd {
+  flex: 1;
+}
+
 
 /* Tablet */
 @media (min-width: 768px) {
@@ -32,6 +36,10 @@
     max-width: 1023px;
     margin: 0 auto;
   }
+  .SpecsRow {
+    gap: 48px;
+  }
+
 }
 
 /* Desktop */
@@ -39,4 +47,5 @@
   .specsContainer {
     max-width: 1200px;
   }
+
 }

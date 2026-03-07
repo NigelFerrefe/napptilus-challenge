@@ -1,9 +1,12 @@
 .similarItemsContainer {
+  padding-bottom: 80px;
+}
+
+.innerContainer {
   display: flex;
   flex-direction: column;
-  padding: 0 16px 80px 16px;
+  padding: 0 16px;
   gap: 40px;
-  overflow: hidden;
 }
 
 .title {
@@ -49,7 +52,7 @@
 
 /* Tablet */
 @media (min-width: 768px) {
-  .similarItemsContainer {
+  .innerContainer {
     max-width: 1023px;
     margin: 0 auto;
     padding-bottom: 80px;
@@ -58,7 +61,7 @@
 
 /* Desktop */
 @media (min-width: 1024px) {
-  .similarItemsContainer {
+  .innerContainer {
     max-width: 1200px;
     padding-bottom: 104px;
   }

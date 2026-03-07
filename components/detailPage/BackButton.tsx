@@ -11,8 +11,8 @@ const BackButton = () => {
   };
   return (
     <div className={styles.backButtonContainer}>
-      <button onClick={handleBack} className={styles.backButton}>
-        <ArrowLeftIcon size={20} />
+      <button onClick={handleBack} className={styles.backButton} aria-label="Previous page" type="button">
+        <ArrowLeftIcon size={20} aria-hidden="true" />
         <span className="textButton">BACK</span>
       </button>
     </div>

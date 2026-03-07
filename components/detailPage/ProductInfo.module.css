@@ -15,6 +15,7 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
+  max-width: 361px;
 }
 
 .productTitlePrice {
@@ -22,9 +23,11 @@
   flex-direction: column;
   gap: 11px;
 }
+
 .tittle {
   font-size: 20px;
 }
+
 .price {
   font-size: 14px;
 }
@@ -33,14 +36,16 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding-bottom: 24px;
 }
+
+/* STORAGE */
+
 .storageContainer {
   display: flex;
   flex-direction: column;
-  width: 273px;
   gap: 20px;
   font-size: 12px;
+  width: 100%;
 }
 
 .storageOption {
@@ -62,12 +67,18 @@
   border-right: 0.5px solid #ccc;
 }
 
+.storageOption button.selectedStorage {
+  border: 1px solid black;
+}
+
+/* COLORS */
+
 .colorsContainer {
   display: flex;
   flex-direction: column;
-  width: 273px;
   gap: 12px;
   font-size: 12px;
+  width: 100%;
 }
 
 .colorsOptions {
@@ -80,10 +91,6 @@
   background: transparent;
   cursor: pointer;
   padding: 1px;
-}
-
-.storageOption button.selectedStorage {
-  border: 1px solid black;
 }
 
 .colorButton.selectedColor {
@@ -100,13 +107,15 @@
   min-height: 14px;
 }
 
+/* BUTTON */
+
 .buttonContainer {
-  display: flex;
-  max-width: 393px;
+  width: 100%;
   height: 48px;
 }
 
 /* Tablet */
+
 @media (min-width: 768px) {
   .productContainer {
     flex-direction: row;
@@ -118,18 +127,21 @@
 
   .productInfoContainer {
     flex: 1;
+    max-width: 361px;
   }
 
   .productImageContainer {
     width: 337px;
     height: 416px;
   }
+
   .buttonContainer {
     width: 260px;
   }
 }
 
 /* Desktop */
+
 @media (min-width: 1024px) {
   .productContainer {
     max-width: 1200px;
@@ -139,6 +151,7 @@
     width: 510px;
     height: 630px;
   }
+
   .productInfoContainer {
     gap: 64px;
   }

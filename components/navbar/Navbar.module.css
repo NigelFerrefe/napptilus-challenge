@@ -30,6 +30,6 @@
 /* Desktop */
 @media (min-width: 1024px) {
   .navbar {
-    padding: 12px 100px;
+    padding: 24px 100px;
   }
 }
